@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Telegraph" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE0-qW-uZ7" customClass="telegraphKeyView" customModule="Telegraph" customModuleProvider="target">
+                                <rect key="frame" x="260" y="260" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="UR2-Po-mRy"/>
+                                    <constraint firstAttribute="height" constant="100" id="f9q-bf-C2i"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-8v-SP0">
+                                <rect key="frame" x="275" y="433" width="51" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="gvE-O3-muB"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="MG6-Mr-15w"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gi1-e9-1rq">
+                                <rect key="frame" x="0.0" y="522" width="600" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="VM2-fb-I7w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aZb-8v-SP0" firstAttribute="centerX" secondItem="Gi1-e9-1rq" secondAttribute="centerX" id="Fiq-HX-wIu"/>
+                            <constraint firstItem="Gi1-e9-1rq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IdR-2e-eW4"/>
+                            <constraint firstItem="Gi1-e9-1rq" firstAttribute="centerX" secondItem="ZE0-qW-uZ7" secondAttribute="centerX" id="Ijt-L1-BEe"/>
+                            <constraint firstAttribute="bottom" secondItem="aZb-8v-SP0" secondAttribute="bottom" constant="137" id="J4M-3b-nXo"/>
+                            <constraint firstItem="aZb-8v-SP0" firstAttribute="top" secondItem="ZE0-qW-uZ7" secondAttribute="bottom" constant="93" id="Lju-ZA-XKu"/>
+                            <constraint firstItem="Gi1-e9-1rq" firstAttribute="top" secondItem="aZb-8v-SP0" secondAttribute="bottom" constant="59" id="Re0-Pb-gba"/>
+                            <constraint firstAttribute="bottom" secondItem="Gi1-e9-1rq" secondAttribute="bottom" constant="20" symbolic="YES" id="XZM-t0-hpB"/>
+                            <constraint firstAttribute="trailing" secondItem="Gi1-e9-1rq" secondAttribute="trailing" id="aJg-Yf-kJ4"/>
+                            <constraint firstItem="ZE0-qW-uZ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="na9-cc-Esq"/>
+                            <constraint firstItem="ZE0-qW-uZ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uKc-6E-UTa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y5z-s6-zwG"/>
+                    <connections>
+                        <outlet property="messageBody" destination="Gi1-e9-1rq" id="RLC-JW-lPL"/>
+                        <outlet property="telegraphKey" destination="ZE0-qW-uZ7" id="vjO-Ut-HWo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="303"/>
+        </scene>
+    </scenes>
+</document>
